@@ -23,7 +23,7 @@ export class LanguageService {
     } else this.setLanguage(storedLang);
   }
 
-  public setLanguage(lang: any) {
+  public setLanguage(lang: string) {
     this.translate.use(lang);
     this.currentLange = {
       name: lang,

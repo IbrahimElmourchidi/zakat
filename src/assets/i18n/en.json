@@ -1,0 +1,9 @@
+{
+  "Landing": {
+    "Header": {
+      "Home": "Home",
+      "Courses":"Courses",
+      "About":"About Us"
+    }
+  }
+}

@@ -8,9 +8,12 @@ import { LanguageService } from 'src/app/core/services/langauge.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public langaugeService:LanguageService) { }
+  constructor(private langaugeService:LanguageService) { }
 
   ngOnInit(): void {
   }
 
+  setlang(lang:string){
+    this.langaugeService.setLanguage(lang)
+  }
 }

@@ -1,0 +1,44 @@
+.banner {
+  min-height: 75vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.arabic img{
+  transform: scaleX(-1);
+}
+
+.intro {
+  color: white;
+  width: 50%;
+  padding: 4rem;
+  z-index: 2;
+
+  h1 {
+    font-weight: 900;
+  }
+  p {
+    font-size: 28px;
+    font-weight: 400;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .intro {
+    width: 100%;
+    padding: 2rem;
+  }
+}

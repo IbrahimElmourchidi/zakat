@@ -1,26 +1,39 @@
 <header
   class="shadow container-fluid py-2 d-flex justify-content-between align-items-center"
 >
-  <img class="logo pointer" src="assets/img/logo.webp" alt="logo" />
-  <nav
-    class="fs-20 flex-grow-1 p-0 m-0 desk d-flex align-items-center justify-content-center"
-  >
-    <ul class="d-flex align-items-center m-0 p-0 justify-content-center">
-      <li>
-        <a routerLink="" class="mx-2">{{
-          "Landing.Header.Home" | translate
-        }}</a>
-      </li>
-      <li>
-        <a routerLink="" class="mx-2">{{
-          "Landing.Header.Courses" | translate
-        }}</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="profile-container">
+  <div class="logo-nav d-flex align-items-center">
+    <img class="logo pointer mb-2" src="assets/img/logo.webp" alt="logo" />
+    <nav
+      class="fs-20  p-4 m-0 desk d-flex align-items-center justify-content-center"
+    >
+      <ul class="d-flex align-items-center m-0 p-0 justify-content-center">
+        <li>
+          <a routerLink="" class="mx-2">{{
+            "Landing.Header.Home" | translate
+          }}</a>
+        </li>
+        <li>
+          <a routerLink="" class="mx-2">{{
+            "Landing.Header.Courses" | translate
+          }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search flex-grow-1 mx-3 d-flex justify-content-center">
+    <input
+      class="form-control px-4"
+      style="max-width: 450px;"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+  </div>
+  <div class="profile-container p-4 desk">
     <button class="btn btn-primary" (click)="setlang('en')">english</button>
+    <span class="mx-1"></span>
     <button class="btn btn-primary" (click)="setlang('ar')">arabic</button>
   </div>
+  <i class="bi bi-list fs-30 mobile"></i>
 </header>
 <div class="up-shift"></div>

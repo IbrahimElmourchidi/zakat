@@ -1,8 +1,9 @@
 header {
-  padding-inline: 10vw;
+  padding-inline: 5vw;
   position: fixed;
   z-index: 50;
   background: var(--bs-body-bg);
+  width: 100%;
 }
 
 .up-shift, header{
@@ -24,3 +25,15 @@ header ul {
     }
   }
 }
+
+
+.search input{
+  height: 50px;
+  border-radius: 999px;
+}
+
+.search input:focus{
+  box-shadow: none;
+}
+
+

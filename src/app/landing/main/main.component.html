@@ -1,16 +1,21 @@
 <section class="banner d-flex" [class.arabic]="!IsLeft()">
   <div class="overflow">
-    <img src="assets/img/banner.webp" alt="banner">
+    <img src="assets/img/banner.webp" alt="banner" />
   </div>
-  <div class="intro d-flex justify-content-center  flex-column">
+  <div class="intro d-flex justify-content-center flex-column">
     <h1 class="title">Welcome to Knowledge Zakat</h1>
     <p>
-      An online free learning Platform,
-      with easy to use content creation tool, to spread the
-      knowlege for free.
+      An online free learning Platform, with easy to use content creation tool,
+      to spread the knowlege for free.
     </p>
     <div class="buttons w-100 d-flex">
-      <button class=" btn btn-primary fs-20">Start Learning</button>
+      <button class="btn btn-primary fs-20">Start Learning</button>
     </div>
+  </div>
+</section>
+<section class=" p-3 my-4">
+  <h2 class="text-center fs-40 fw-400 my-4">Popular Courses</h2>
+  <div class="row">
+    <app-horizontal-courselist></app-horizontal-courselist>
   </div>
 </section>

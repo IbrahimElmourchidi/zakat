@@ -7,17 +7,16 @@ import { HeaderComponent } from './header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { MainComponent } from './main/main.component';
 
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    LandingComponent,
-    HeaderComponent,
-    MainComponent
-  ],
+  declarations: [LandingComponent, HeaderComponent, MainComponent],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    TranslateModule.forChild()
-  ]
+    TranslateModule.forChild(),
+    SharedModule,
+    SharedModule,
+  ],
 })
-export class LandingModule { }
+export class LandingModule {}

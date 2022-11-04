@@ -1,5 +1,9 @@
 @import "./custom.scss";
 @import "./font.scss";
+@import "./browser.scss";
+@import "./borders.scss";
+
+
 *,
 *::after,
 *::before {
@@ -10,9 +14,13 @@
 
 body{
   font-family: 'Readex Pro', sans-serif;
-  min-width: 360px;
+  min-width: 350px;
   background-color: #FFFFFF;
   font-size: 16px;
+}
+
+:root[dir='rtl']{
+  font-size: 14px;
 }
 
 .mobile {

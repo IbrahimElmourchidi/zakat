@@ -1,0 +1,27 @@
+/* custom scrollbar start*/
+::-webkit-scrollbar {
+  width: 0.40rem;
+  height: 0.40rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba($color: white, $alpha: 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--bs-primary-rgb), 0.8);
+  border-radius: 0px;
+}
+
+
+.scroll-hidden {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}
+/* custom scrollbar end*/
+
+/* remove arrows in number input */

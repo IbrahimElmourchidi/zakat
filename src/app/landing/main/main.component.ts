@@ -13,10 +13,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-  IsLeft(){
-    console.log(this.languageService.currentLange);
 
+  IsLeft(){
     return this.languageService.currentLange.isLeft;
   }
 

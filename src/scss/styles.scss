@@ -19,12 +19,12 @@ body{
   font-size: 16px;
 }
 
-:root[dir='rtl']{
-  font-size: 14px;
-}
+// :root[dir='rtl']{
+//   font-size: 14px;
+// }
 
 .mobile {
-  display: none !important;
+  display: none;
 }
 
 .pointer{

@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
   accordionContent = [
-    { header: 'Status', type: 'Check', items: ['New', 'Popular', 'Top Rated'] },
-    { header: 'Level', type: 'Check', items: ['Beginner', 'Intermediate', 'Advanced'] },
+    {
+      header: 'Level',
+      type: 'check',
+      keys: ['Beginner', 'Intermediate', 'Advanced'],
+    },
   ];
   constructor() {}
 

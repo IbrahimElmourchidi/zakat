@@ -4,7 +4,7 @@
   display: grid;
   grid-auto-flow: column;
   gap: 1rem;
-  grid-auto-columns: minmax(270px, 23%);
+  grid-auto-columns: minmax(300px, 23%);
   overscroll-behavior-inline: contain;
 }
 
@@ -34,7 +34,6 @@
   left: auto;
   right: 0px;
 }
-
 
 @media all and (max-width:900px){
   .courses-list{

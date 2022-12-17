@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CourseInfoI } from 'src/app/core/interfaces/course-info.interface';
 
 @Component({
   selector: 'app-horizontal-courselist',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horizontal-courselist.component.scss']
 })
 export class HorizontalCourselistComponent implements OnInit {
-
+  @Input('courses') courses:CourseInfoI[] = [];
   constructor() { }
 
   ngOnInit(): void {

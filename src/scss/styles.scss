@@ -35,6 +35,11 @@ body{
   height: 60px;
 }
 
+a.badge.rounded-pill{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 900px) {
   .mobile {
     display: initial;

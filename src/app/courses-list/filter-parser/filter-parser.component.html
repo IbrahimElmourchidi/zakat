@@ -1,21 +1,46 @@
 <ul class="list-group list-group-flush" *ngIf="type === 'check'">
   <li class="list-group-item" *ngFor="let val of keys">
     <input
-      class="form-check-input mx-2 "
+      class="form-check-input mx-2"
       type="checkbox"
       value=""
       id="flexCheckDefault"
     />
     <label class="form-check-label" for="flexCheckDefault">
-      {{val}}
+      {{ val }}
+    </label>
+  </li>
+</ul>
+
+<ul class="list-group list-group-flush" *ngIf="type === 'radio'">
+  <li class="list-group-item" *ngFor="let val of keys">
+    <input
+      class="form-check-input mx-2"
+      type="radio"
+      name="listGroupRadio"
+      value=""
+      id="firstRadio"
+      checked
+    />
+    <label class="form-check-label" for="firstRadio">{{ val }}</label>
+  </li>
+</ul>
+
+<ul class="list-group list-group-flush" *ngIf="type === 'rating'">
+  <li class="list-group-item" *ngFor="let val of keys">
+    <input
+      class="form-check-input mx-2"
+      type="radio"
+      name="listGroupRadio"
+      value=""
+      id="radio{{ val }}"
+      checked
+    />
+    <label class="form-check-label" for="radio{{ val }}">
+      <app-star-rating [rating]="getInt(val)"></app-star-rating>
+      <span> {{ ratingToPoint(val) }} & Up</span>
     </label>
   </li>
 </ul>
 
 
-<ul class="list-group list-group-flush" *ngIf="type === 'radio'">
-  <li class="list-group-item" *ngFor="let val of keys">
-    <input class="form-check-input mx-2" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
-    <label class="form-check-label" for="firstRadio">{{val}}</label>
-  </li>
-</ul>

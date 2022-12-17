@@ -1,7 +1,5 @@
-<div>
-  <span *ngFor="let rate of ratingList">
-    <i class="bi bi-star-fill" *ngIf="rate === 'full'"></i>
-    <i class="bi bi-star-half" *ngIf="rate === 'half'"></i>
-    <i class="bi bi-star" *ngIf="rate === 'empty'"></i>
-  </span>
-</div>
+<span *ngFor="let rate of ratingList">
+  <i class="bi bi-star-fill" *ngIf="rate === 'full'"></i>
+  <i class="bi bi-star-half" *ngIf="rate === 'half'"></i>
+  <i class="bi bi-star" *ngIf="rate === 'empty'"></i>
+</span>

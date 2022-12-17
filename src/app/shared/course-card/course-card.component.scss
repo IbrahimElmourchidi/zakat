@@ -1,0 +1,11 @@
+.hidden-card{
+  display: none;
+  position: absolute;
+  left:105%;
+  z-index: 2;
+}
+
+
+.parent-card:hover > .hidden-card{
+  display: block;
+}

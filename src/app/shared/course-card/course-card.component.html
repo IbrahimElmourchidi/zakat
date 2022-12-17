@@ -1,25 +1,59 @@
-<div class="card shadow-sm">
+<div class="card parent-card shadow-sm position-relative">
   <div class="card-img position-relative">
-    <div class="tag-btns position-absolute d-flex justify-content-end w-100 p-2">
-      <button class="btn btn-sn btn-danger fs-11 br-1 px-2 py-0 text-uppercase mx-1">New</button>
-      <button class="btn btn-sn btn-success fs-11 br-1 px-2 py-0 text-uppercase mx-1">Popular</button>
-      <button class="btn btn-sn btn-warning fs-11 br-1 px-2 py-0 text-uppercase mx-1">Top Rated</button>
+    <div
+      class="tag-btns position-absolute d-flex justify-content-end w-100 p-2"
+    >
+      <button
+        class="btn btn-sn btn-danger fs-11 br-1 px-2 py-0 text-uppercase mx-1"
+        *ngIf="course.features.new"
+      >
+        New
+      </button>
+      <button
+        class="btn btn-sn btn-success fs-11 br-1 px-2 py-0 text-uppercase mx-1"
+        *ngIf="course.features.popular"
+      >
+        Popular
+      </button>
+      <button
+        class="btn btn-sn btn-warning fs-11 br-1 px-2 py-0 text-uppercase mx-1"
+        *ngIf="course.features.top"
+      >
+        Top Rated
+      </button>
     </div>
-    <img src="../../../assets/img/thumb.jpg" class="card-img-top" alt="course-thumb">
+    <img src="{{ course.Thumb }}" class="card-img-top" alt="course-thumb" />
   </div>
   <div class="card-body">
-    <small class="card-subtitle text-muted">Web Dev</small>
-    <h5 class="card-text">Angular the complete dev guide</h5>
-    <hr>
+    <p>
+      <small
+        class="card-subtitle text-muted mx-1"
+        *ngFor="let tag of course.Tags.slice(0,2)"
+      >
+        <a routerLink="." class="badge rounded-pill text-bg-primary">{{
+          tag
+        }}</a>
+      </small>
+    </p>
+    <h5 class="card-text">{{ course.Title }}</h5>
+    <hr />
     <div class="footer d-flex justify-content-between">
       <span class="rating">
-        <span>&#11088;</span>
-        <span>&#11088;</span>
-        <span>&#11088;</span>
-        <span>&#11088;</span>
+        <app-star-rating [rating]="course.Rating"></app-star-rating>
       </span>
-      <a routerLink="'.">Author Name</a>
+      <a routerLink="'.">{{ course.Instructor.Name }}</a>
     </div>
-
+  </div>
+  <div class="card hidden-card shadow-lg" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
   </div>
 </div>

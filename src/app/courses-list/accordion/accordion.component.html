@@ -1,14 +1,27 @@
 <div class="accordion" id="FilterSideNav">
-  <div class="accordion-item" *ngFor="let sublist of accordionContent; let i=index">
-    <h2 class="accordion-header" id="{{sublist.header}}">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse-{{i}}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        {{sublist.header}}
+  <div class="accordion-item" *ngFor="let sublist of accordionContent">
+    <h2 class="accordion-header" id="{{ sublist.Header }}">
+      <button
+        class="accordion-button text-capitalize"
+        type="button"
+        data-bs-toggle="collapse"
+        attr.data-bs-target="#collapse-{{ sublist.Header }}"
+        aria-expanded="true"
+        aria-controls="panelsStayOpen-collapseOne"
+      >
+        {{ sublist.Header }}
       </button>
     </h2>
-    <div id="collapse-{{i}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+    <div
+      id="collapse-{{ sublist.Header }}"
+      class="accordion-collapse collapse show"
+      aria-labelledby="panelsStayOpen-headingOne"
+    >
       <div class="accordion-body">
-        <app-filter-parser [keys]="sublist.keys" [type]="sublist.type"></app-filter-parser>
-        <app-star-rating [rating]="85"></app-star-rating>
+        <app-filter-parser
+          [keys]="sublist.Items"
+          [type]="sublist.Type"
+        ></app-filter-parser>
       </div>
     </div>
   </div>
